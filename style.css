@@ -1,24 +1,24 @@
 @charset "UTF-8";
 
-@font-face
-{
-font-family: しねきゃぷしょん;
-src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2')
-     format("woff2");
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+@font-face {
+    font-family: しねきゃぷしょん;
+    src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2') format("woff2");
 }
 
 body {
-    background: #efefef;
+    background: #f0f8ff; /* 儚い水色系 */
     color: #555;
     font-size: 12px;
-    font-family:  メイリオ, sans-serif;
+    font-family: 'Dancing Script', 'Caveat', 'Microsoft YaHei', gulim, メイリオ, sans-serif;
     line-height: 200%;
     letter-spacing: 2px;
     margin: 0;
 }
 
 a, a:hover {
-    color: #5A5FAA;
+    color: #64C8F0; /* メイン水色 */
     text-decoration: none;
 }
 
@@ -27,6 +27,7 @@ h1 {
     font-size: 18px;
     margin: 10px 0 20px;
     font-weight: normal;
+    color: #64C8F0;
 }
 
 h2 {
@@ -34,6 +35,7 @@ h2 {
     font-size: 20px;
     margin: 10px 0 20px;
     font-weight: normal;
+    color: #64C8F0;
 }
 
 h3 {
@@ -41,16 +43,11 @@ h3 {
     font-size: 16px;
     margin: 20px 0 10px;
     font-weight: normal;
-}
-
-h2 p,h3 p {
     color: #64C8F0;
-    display: inline-block;
-    margin: 0 5px 0 0;
 }
 
 b {
-    background: #64C8F0;
+    background: #c0e7ff; /* 儚めの強調 */
     margin: 3px;
     padding: 0 2px;
     font-weight: normal;
@@ -62,7 +59,7 @@ b {
 }
 
 .top {
-    background: #fef4f4;
+    background: #f0f8ff; /* 儚めの背景 */
     margin: 0 auto;
     padding: 15px;
     border-right: solid #64C8F0 2px;
@@ -92,31 +89,29 @@ b {
     text-transform: uppercase;
 }
 
-.menu li a:hover, 
-.menu li a:active {
-    background: #f0908d;
+.menu li a:hover, .menu li a:active {
+    background: #a0d0f0; /* 儚めにホバー */
     display: block;
     padding: 5px 0;
 }
 
 .bt {
-    background: #ffb6c1;
+    background: #b0e0ff;
     color: #fff;
     padding: 5px 15px;
     text-align: center;
 }
 
 .box {
-    background: #fef4f4;
+    background: #eef6fc; /* 儚め水色背景 */
     border: solid #fff 1px;
     margin: 5px;
     padding: 10px;
 }
 
 .box2 {
-    background: #fff;
+    background: #f8fcff;
     border: solid #fff 1px;
     margin: 5px;
     padding: 10px;
 }
-
