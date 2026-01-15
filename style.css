@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+@font-face
+{
+font-family: しねきゃぷしょん;
+src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2')
+     format("woff2");
+}
+
+body {
+    background: #efefef;
+    color: #555;
+    font-size: 12px;
+    font-family:  メイリオ, sans-serif;
+    line-height: 200%;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+a, a:hover {
+    color: #5A5FAA;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: しねきゃぷしょん;
+    font-size: 18px;
+    margin: 10px 0 20px;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Dancing Script', 'Caveat', 'Microsoft YaHei', gulim, メイリオ, sans-serif;
+    font-size: 20px;
+    margin: 10px 0 20px;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: 'Dancing Script', 'Caveat', 'Microsoft YaHei', gulim, メイリオ, sans-serif;
+    font-size: 16px;
+    margin: 20px 0 10px;
+    font-weight: normal;
+}
+
+h2 p,h3 p {
+    color: #64C8F0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+b {
+    background: #64C8F0;
+    margin: 3px;
+    padding: 0 2px;
+    font-weight: normal;
+}
+
+.wrp {
+    max-width: 300px;
+    margin: 50px auto 10px;
+}
+
+.top {
+    background: #fef4f4;
+    margin: 0 auto;
+    padding: 15px;
+    border-right: solid #64C8F0 2px;
+    border-left: solid #64C8F0 2px;
+}
+
+.menu {
+    display: table;
+    table-layout: fixed;
+    background: #64C8F0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.menu li {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.menu li a:hover, 
+.menu li a:active {
+    background: #f0908d;
+    display: block;
+    padding: 5px 0;
+}
+
+.bt {
+    background: #ffb6c1;
+    color: #fff;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.box {
+    background: #fef4f4;
+    border: solid #fff 1px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.box2 {
+    background: #fff;
+    border: solid #fff 1px;
+    margin: 5px;
+    padding: 10px;
+}
+
