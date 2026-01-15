@@ -196,13 +196,22 @@ b {
   top: -0.9em;
   left: 1.4em;
 
-  padding: 0 0.7em;
+  padding: 0.15em 0.9em 0.15em 0.7em;
+  background: #ffffff;
 
-  background: #ffffff; /* ←ここが重要 */
+  border-radius: 999px; /* 角丸（ピル型） */
+
   color: #64C8F0;
-
   font-size: 0.9em;
   letter-spacing: 0.12em;
 
-  z-index: 1; /* 点線より上 */
+  z-index: 1;
+}
+
+/* ◆マーク */
+.mnbox .mn-title::before {
+  content: "◆";
+  color: #ffe28a; /* 淡い黄色 */
+  margin-right: 0.5em;
+  font-size: 0.9em;
 }
