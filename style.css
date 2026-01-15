@@ -161,10 +161,11 @@ b {
 /* 日記本文用ボックス（タイトル対応・完全版） */
 .mnbox {
   position: relative;
-
   max-width: 680px;
   margin: 3em auto;
-  padding: 2.8em 2.2em 2.4em;
+
+  /* ← 上だけ詰めた */
+  padding: 1.8em 2.2em 2.4em;
 
   background-color: #ffffff;
   border-radius: 22px;
@@ -181,7 +182,6 @@ b {
   content: "";
   position: absolute;
   inset: 0;
-  margin: 0;
 
   border: 1.5px dotted rgba(100, 200, 240, 0.7);
   border-radius: 22px;
@@ -198,8 +198,7 @@ b {
 
   padding: 0.15em 0.9em 0.15em 0.7em;
   background: #ffffff;
-
-  border-radius: 999px; /* 角丸（ピル型） */
+  border-radius: 999px;
 
   color: #64C8F0;
   font-size: 0.9em;
@@ -211,7 +210,12 @@ b {
 /* ◆マーク */
 .mnbox .mn-title::before {
   content: "◆";
-  color: #ffe28a; /* 淡い黄色 */
+  color: #ffe28a;
   margin-right: 0.5em;
   font-size: 0.9em;
+}
+
+/* 最初の段落だけ上余白なし */
+.mnbox p:first-child {
+  margin-top: 0;
 }
