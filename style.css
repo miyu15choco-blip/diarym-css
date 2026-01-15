@@ -158,40 +158,11 @@ b {
     padding: 0 2px;
 }
 
-/* 儚め水色ステッチボックス（長文向け） */
 .mnbox {
-    margin: 2.5em auto;
-    padding: 2em 2.2em;
-    position: relative;
-    z-index: 0;
-
-    background-color: #f8fcff; /* ほぼ白の水色 */
-    max-width: 720px;
-
-    border-radius: 18px; /* 角をやさしく */
-}
-
-/* 淡い黄色の縫い目 */
-.cstm-box-stitch-blue::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    margin: 10px;
-
-    border: 1.5px dashed rgba(255, 230, 150, 0.7);
-    border-radius: 14px;
-
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* ボックス内テキスト調整（長文対策） */
-.cstm-box-stitch-blue p {
-    margin: 0 0 1.2em;
-    line-height: 2.1;
-}
-
-/* 最後の段落だけ余白なし */
-.cstm-box-stitch-blue p:last-child {
-    margin-bottom: 0;
+  border: 2px dotted #64C8F0;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffffff;
 }
