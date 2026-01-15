@@ -158,15 +158,15 @@ b {
     padding: 0 2px;
 }
 
-/* 日記本文用ボックス（改良版） */
+/* 日記本文用ボックス（タイトル対応・完全版） */
 .mnbox {
+  position: relative;
+
   max-width: 680px;
   margin: 3em auto;
-  padding: 2.4em 2.2em;
+  padding: 2.8em 2.2em 2.4em;
 
   background-color: #ffffff;
-
-  border: 1.5px dotted rgba(100, 200, 240, 0.7);
   border-radius: 22px;
 
   line-height: 2.1;
@@ -176,11 +176,33 @@ b {
   box-shadow: 0 8px 22px rgba(100, 200, 240, 0.08);
 }
 
-/* 段落の余白調整 */
-.mnbox p {
-  margin: 0 0 1.4em;
+/* 点線枠を疑似要素で描画 */
+.mnbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: 0;
+
+  border: 1.5px dotted rgba(100, 200, 240, 0.7);
+  border-radius: 22px;
+
+  z-index: 0;
+  pointer-events: none;
 }
 
-.mnbox p:last-child {
-  margin-bottom: 0;
+/* 左上タイトル */
+.mnbox .mn-title {
+  position: absolute;
+  top: -0.9em;
+  left: 1.4em;
+
+  padding: 0 0.7em;
+
+  background: #ffffff; /* ←ここが重要 */
+  color: #64C8F0;
+
+  font-size: 0.9em;
+  letter-spacing: 0.12em;
+
+  z-index: 1; /* 点線より上 */
 }
