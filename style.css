@@ -151,3 +151,9 @@ b {
     display: inline-block;
     padding: 0 2px;
 }
+
+.line_rou {
+    background: linear-gradient(transparent 60%, #5A5FAA 60%);
+    display: inline-block;
+    padding: 0 2px;
+}
