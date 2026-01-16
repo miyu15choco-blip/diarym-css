@@ -163,9 +163,10 @@ b {
   letter-spacing: 0.05em;
   color: #555;
   box-shadow: 0 8px 22px rgba(100, 200, 240, 0.08);
-  display: flow-root; 
+  display: flow-root;
 }
 
+/* 本文余白制御 */
 .mnbox p {
   margin: 0 0 1.2em;
 }
