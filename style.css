@@ -212,7 +212,7 @@ b {
 
 /* なうぷれ */
 .nupr {
-  margin: 0.4em 0 0.9em;
+  margin: 0 0 0.9em;
   padding: 0.25em 0.8em;
   background: rgba(100, 200, 240, 0.1);
   border-radius: 999px;
@@ -220,7 +220,6 @@ b {
   font-size: 0.85em;
   line-height: 1.6;
 }
-
 /* 流れる文字 */
 .nupr-text {
   display: inline-block;
