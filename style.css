@@ -178,14 +178,15 @@ b {
 /* 左上タイトル */
 .mnbox .mn-title {
   position: absolute;
-  top: -0.85em;
+  top: -0.9em;
   left: 1.4em;
-  padding: 0.2em 0.9em 0.2em 0.7em;
+  padding: 0.22em 1em 0.22em 0.8em;
   background: #ffffff;
   border-radius: 999px;
   color: #64C8F0;
-  font-size: 0.85em;
+  font-size: 0.95em;
   letter-spacing: 0.12em;
+
   z-index: 1;
 }
 
