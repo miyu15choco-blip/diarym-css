@@ -166,6 +166,18 @@ b {
   display: flow-root; 
 }
 
+.mnbox p {
+  margin: 0 0 1.2em;
+}
+
+.mnbox > *:first-child {
+  margin-top: 0;
+}
+
+.mnbox > *:last-child {
+  margin-bottom: 0;
+}
+
 /* 点線枠を疑似要素で描画 */
 .mnbox::before {
   content: "";
