@@ -207,26 +207,32 @@ b {
 
 /* なうぷれ */
 .nupr {
-  margin: 0.3em 0 0;
-  padding: 0.25em 0.8em;
-  background: rgba(100, 200, 240, 0.1);
+  margin: 0.6em auto 0;
+  padding: 0.3em 0.9em;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 999px;
   overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   font-size: 0.85em;
   line-height: 1.4;
 }
 
+/* ===== なうぷれ文字（Safari対策込み） ===== */
 .nupr-text {
   display: inline-block;
   padding-left: 100%;
   white-space: nowrap;
   animation: nupr 22s linear infinite;
-  color: #555;
+  color: #666;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
+/* ===== 流れるアニメーション ===== */
 @keyframes nupr {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-100%); }
-}
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+      }
