@@ -212,7 +212,7 @@ b {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 999px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
+  box-shadow: 0 4px 6px rgba(255, 226, 138, 0.35);
   font-size: 0.85em;
   line-height: 1.4;
 }
