@@ -221,7 +221,7 @@ b {
 }
 
 /* ナウプレ上用） */
-.music box {
+.music {
   display: flex;
   align-items: center;
   gap: 1em;
