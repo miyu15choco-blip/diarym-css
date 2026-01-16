@@ -109,13 +109,6 @@ b {
     padding: 10px;
 }
 
-.box2 {
-    background: #f8fcff;
-    border: solid #fff 1px;
-    margin: 5px;
-    padding: 10px;
-}
-
 .line_mn {
     background: linear-gradient(transparent 60%, #64C8F0 60%);
     display: inline-block;
