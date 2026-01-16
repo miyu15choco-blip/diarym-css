@@ -158,18 +158,19 @@ b {
     padding: 0 2px;
 }
 
-/* 日記本文用ボックス（タイトル対応・完全版） */
+/* 日記本文用ボックス　*/
 .mnbox {
   position: relative;
   max-width: 680px;
-  margin: 3em auto;
-  padding: 1.8em 2.2em 2.4em;
+  margin: 2.5em auto;
+  padding: 2.2em 2.2em 2.4em;
   background-color: #ffffff;
   border-radius: 22px;
   line-height: 2.1;
   letter-spacing: 0.05em;
   color: #555;
   box-shadow: 0 8px 22px rgba(100, 200, 240, 0.08);
+  display: flow-root; 
 }
 
 /* 点線枠を疑似要素で描画 */
