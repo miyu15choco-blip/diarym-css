@@ -71,10 +71,11 @@ b {
 b.honey {
   background: linear-gradient(
     transparent 60%,
-    rgba(245,200,66,0.35) 60%
+    rgba(245, 200, 66, 0.35) 60%
   );
   color: #f5c842;
-}
+  padding: 0 2px;
+  font-weight:
 
 .wrp {
     max-width: 300px;
