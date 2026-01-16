@@ -219,3 +219,48 @@ b {
 .mnbox p:first-child {
   margin-top: 0;
 }
+
+/* ナウプレ上用） */
+.music box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  margin: 1.8em 0;
+  padding: 0.6em 1em;
+
+  background: rgba(100, 200, 240, 0.12); /* ほんのり水色 */
+  border-radius: 12px;
+
+  font-size: 0.9em;
+}
+
+/* ラベル（固定） */
+.marquee-label {
+  flex-shrink: 0;
+  color: #64C8F0;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+/* 流れる部分 */
+.marquee {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* 流れる文字 */
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+
+  animation: marquee 20s linear infinite;
+  color: #555;
+}
+
+/* アニメーション */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
