@@ -186,7 +186,6 @@ b {
   color: #64C8F0;
   font-size: 0.95em;
   letter-spacing: 0.12em;
-
   z-index: 1;
 }
 
@@ -210,11 +209,9 @@ b {
 .nupr {
   margin: 0.4em 0 0;
   padding: 0.25em 0.8em;
-
   background: rgba(100, 200, 240, 0.12);
   border-radius: 999px;
   overflow: hidden;
-
   font-size: 0.8em;
   line-height: 1.4;
 }
