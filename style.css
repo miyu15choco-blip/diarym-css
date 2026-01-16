@@ -73,10 +73,9 @@ b.honey {
     transparent 60%,
     rgba(245, 200, 66, 0.35) 60%
   );
-  color: #f5c842;
   padding: 0 2px;
-  font-weight:
-
+  font-weight: normal;
+}
 .wrp {
     max-width: 300px;
     margin: 50px auto 10px;
