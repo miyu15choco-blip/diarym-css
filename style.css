@@ -226,10 +226,10 @@ b {
   align-items: center;
   gap: 1em;
 
-  margin: 1.8em 0;
-  padding: 0.6em 1em;
+  margin: 0.6em 0 1.2em;
+  padding: 0.5em 1em;
 
-  background: rgba(100, 200, 240, 0.12); /* ほんのり水色 */
+  background: rgba(100, 200, 240, 0.12);
   border-radius: 12px;
 
   font-size: 0.9em;
