@@ -260,3 +260,41 @@ b.honey {
   100% {
     transform: translateX(-100%);
       }
+
+/* ナイショバナシ */
+.secret {
+  margin: 1.5em 0;
+}
+
+.secret summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #64C8F0;
+  padding: 0.4em 0.8em;
+  border-radius: 999px;
+  background: rgba(100, 200, 240, 0.12);
+  display: inline-block;
+}
+
+/* ▶︎マーク消す（Safari対応） */
+.secret summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 開いたとき */
+.secret[open] summary {
+  background: rgba(255, 230, 150, 0.35);
+  color: #8a6b00;
+}
+
+/* 中身 */
+.secret p {
+  margin: 0.8em 0 0;
+  padding: 0.8em 1em;
+  background: #ffffff;
+  border-radius: 14px;
+  font-size: 0.9em;
+  line-height: 1.9;
+  box-shadow: 0 4px 10px rgba(255, 230, 150, 0.15);
+}
