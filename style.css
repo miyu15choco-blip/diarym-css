@@ -136,11 +136,10 @@ b.honey {
 /* ラインマーカー共通（ドット下線） */
 [class^="line_"] {
   background: none;
-  border-bottom: 2px dotted currentColor;
+  border-bottom: 1.5px dotted currentColor;
   padding-bottom: 2px;
   display: inline-block;
 }
-
 .line_mn   { color: #64C8F0; }
 .line_mira { color: #2C35BD; }
 .line_rai  { color: #DCFF50; }
@@ -148,6 +147,7 @@ b.honey {
 .line_rito { color: #FAC31E; }
 .line_tetsu{ color: #8C4664; }
 .line_rou  { color: #5A5FAA; }
+
 
 /* 日記本文用ボックス　*/
 .mnbox {
