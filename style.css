@@ -140,13 +140,13 @@ b.honey {
   padding-bottom: 2px;
   display: inline-block;
 }
-.line_mn   { color: #64C8F0; }
-.line_mira { color: #2C35BD; }
-.line_rai  { color: #DCFF50; }
-.line_mel  { color: #EB4682; }
-.line_rito { color: #FAC31E; }
-.line_tetsu{ color: #8C4664; }
-.line_rou  { color: #5A5FAA; }
+.line_mn    { border-bottom-color: #64C8F0; }
+.line_mira  { border-bottom-color: #2C35BD; }
+.line_rai   { border-bottom-color: #DCFF50; }
+.line_mel   { border-bottom-color: #EB4682; }
+.line_rito  { border-bottom-color: #FAC31E; }
+.line_tetsu { border-bottom-color: #8C4664; }
+.line_rou   { border-bottom-color: #5A5FAA; }
 
 
 /* 日記本文用ボックス　*/
