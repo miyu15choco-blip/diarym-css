@@ -133,47 +133,19 @@ b.honey {
     padding: 10px;
 }
 
-.line_mn {
-    background: linear-gradient(transparent 60%, #64C8F0 60%);
-    display: inline-block;
-    padding: 0 2px;
+/* ラインマーカー共通（ドット下線） */
+[class^="line_"] {
+  background: none;
+  border-bottom: 2px dotted currentColor;
+  padding-bottom: 2px;
 }
-
-.line_mira {
-    background: linear-gradient(transparent 60%, #2C35BD 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
-
-.line_rai {
-    background: linear-gradient(transparent 60%, #DCFF50 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
-
-.line_mel {
-    background: linear-gradient(transparent 60%, #EB4682 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
-
-.line_rito {
-    background: linear-gradient(transparent 60%, #FAC31E 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
-
-.line_tetsu {
-    background: linear-gradient(transparent 60%, #8C4664 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
-
-.line_rou {
-    background: linear-gradient(transparent 60%, #5A5FAA 60%);
-    display: inline-block;
-    padding: 0 2px;
-}
+.line_mn   { color: #64C8F0; }
+.line_mira { color: #2C35BD; }
+.line_rai  { color: #DCFF50; }
+.line_mel  { color: #EB4682; }
+.line_rito { color: #FAC31E; }
+.line_tetsu{ color: #8C4664; }
+.line_rou  { color: #5A5FAA; }
 
 /* 日記本文用ボックス　*/
 .mnbox {
