@@ -50,7 +50,7 @@ h3 {
 }
 
 h3::before {
-  content: "⬣";
+  content: "⬢";
   color: #ffe9a8;
   font-size: 0.8em;
   margin-right: 0.4em;
@@ -190,7 +190,7 @@ b.honey {
 
 /* ◆ */
 .mnbox .mn-title::before {
-  content: "⬣";
+  content: "⬢";
   color: #ffe28a;
   margin-right: 0.45em;
 }
