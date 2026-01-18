@@ -52,7 +52,7 @@ h3 {
 h3::before {
   content: "⬢";
   color: #ffe9a8;
-  font-size: 0.8em;
+  font-size: 1em;
   margin-right: 0.4em;
 }
 
@@ -188,9 +188,9 @@ b.honey {
   z-index: 1;
 }
 
-/* ◆ */
+/* タイトル前の記号 */
 .mnbox .mn-title::before {
-  content: "⬢";
+  content: "⬣";
   color: #ffe28a;
   margin-right: 0.45em;
 }
@@ -253,7 +253,6 @@ b.honey {
 
 /* ───────────────
    ナイショバナシ
-   とろける蜂蜜デザイン
 ──────────────── */
 
 .secret {
@@ -284,7 +283,7 @@ b.honey {
   display: none;
 }
 
-/* 開いたとき（蜂蜜がにじむ） */
+/* 開いたとき */
 .secret[open] summary {
   background:
     linear-gradient(
@@ -373,7 +372,7 @@ b.honey {
   content: "⬣";
   margin-right: 0.45em;
   color: #e6c86e;           /* くすみイエロー */
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 /* =========================
