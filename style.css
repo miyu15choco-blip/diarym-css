@@ -203,6 +203,11 @@ b.honey {
   margin-bottom: 0;
 }
 
+.mn-divider::before {
+  content: "✧   ✧   ✧";
+  color: #ffe28a;
+}
+
 /* なうぷれ */
 .nupr {
   margin: 0.6em auto 0;
