@@ -31,22 +31,29 @@ h1 {
 }
 
 h2 {
-  font-family: 'Allura', cursive;
-  font-size: 24px;
+  font-family: 'Niramit', 'メイリオ', sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  margin: 0.9em 0 0.4em;
+  margin: 1.4em 0 0.6em;
   color: #64C8F0;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.18em;
 }
 
+h2::after {
+  content: "⬢";
+  color: #ffe28a;
+  font-size: 0.75em;
+}
+
+
+
 h3 {
-  font-family: 'Caveat', 'Dancing Script', cursive;
-  font-size: 14.5px;
+  font-family: inherit;
+  font-size: 13.5px;
   margin: 1em 0 0.4em;
   font-weight: normal;
-  color: #7fbfe6;
-  letter-spacing: 0.1em;
-  position: relative;
+  color: #8fbdd8;
+  letter-spacing: 0.08em;
 }
 
 h3::before {
