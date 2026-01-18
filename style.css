@@ -209,7 +209,7 @@ b.honey {
 }
 
 .mn-divider::before {
-  content: "✧   ✧   ✧";
+  content: "  ✧     ✧     ✧  ";
   color: #ffe28a;
 }
 
