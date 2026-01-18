@@ -330,22 +330,23 @@ b.honey {
 
 .list-head b {
   display: inline-block;
-  background: none;
-  margin: 0;
-  font-weight: normal;
-  font-size: 0.85em;
-  letter-spacing: 0.1em;
   padding: 0.3em 1em;
   border-radius: 999px;
-  background: rgba(100, 200, 240, 0.25);
-  color: #5aaed6;
-  box-shadow: 0 2px 6px rgba(100, 200, 240, 0.15);
+
+  background: #f5f8fb;      /* ほぼ白のくすみ水色 */
+  color: #5e6e7a;           /* 青みグレー文字 */
+
+  font-size: 0.85em;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+
+  box-shadow: 0 1px 4px rgba(100, 200, 240, 0.12);
 }
 
 .list-head b::before {
   content: "✿";
-  margin-right: 0.4em;
-  color: #ffe28a;
+  margin-right: 0.45em;
+  color: #e6c86e;           /* くすみイエロー */
   font-size: 0.9em;
 }
 
