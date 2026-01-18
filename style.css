@@ -290,10 +290,10 @@ b.honey {
 }
 
 /* 鑑賞済リスト　*/
-.listbox {
+..listbox {
   margin: 2em auto;
   padding: 1.8em 2em;
-  background: #ffffff;
+  background: #ffffff; /* 本体は白 */
   border: 1px solid rgba(100, 200, 240, 0.35);
   position: relative;
   max-width: 680px;
@@ -305,13 +305,19 @@ b.honey {
 .listbox::after {
   content: '';
   position: absolute;
-  top: -8px;
-  left: -8px;
+  top: -8px;   /* 上にずらす */
+  left: -8px;  /* 左にずらす */
   width: 100%;
   height: 100%;
-  background: rgba(100, 200, 240, 0.12);
+  background: rgba(100, 200, 240, 0.18); /* 淡い水色 */
   border-radius: 18px;
   z-index: -1;
+}
+
+/* 中の要素が浮かないように */
+.listbox p,
+.listbox h3 {
+  margin-top: 0;
 }
 
 /* 見出しの余白対策 */
