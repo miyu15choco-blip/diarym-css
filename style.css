@@ -196,7 +196,7 @@ b.honey {
 
 /* 本文 */
 .mnbox p {
-  margin: 0 0 1.2em;
+  margin: 0 0 0;
 }
 
 .mnbox p:last-child {
