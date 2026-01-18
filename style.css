@@ -207,15 +207,29 @@ b.honey {
   margin-bottom: 0;
 }
 
+/* 会話変更ライン */
 .mn-divider {
   text-align: center;
-  margin: 0.8em 0;
+  margin: 1.4em 0;
   line-height: 1;
 }
 
 .mn-divider::before {
-  content: "  ✧     ✧     ✧  ";
+  content: "⎔ − ⬣ − ⎔ − ⬣ − ⎔";
   color: #ffe28a;
+  font-size: 0.85em;
+  letter-spacing: 0.25em;
+}
+
+/* 中央だけ大きくする */
+.mn-divider::after {
+  content: "⬣";
+  position: relative;
+  margin-left: -3.1em; /* 中央の⬣位置に重ねる */
+  font-size: 1.15em;
+  color: #ffe28a;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* なうぷれ */
