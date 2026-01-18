@@ -203,6 +203,11 @@ b.honey {
   margin-bottom: 0;
 }
 
+.mn-divider {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
 .mn-divider::before {
   content: "✧   ✧   ✧";
   color: #ffe28a;
