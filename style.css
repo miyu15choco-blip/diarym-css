@@ -139,7 +139,9 @@ b.honey {
   text-decoration-style: wavy;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
+  text-decoration-skip-ink: none;
 }
+
 .line_mn    { text-decoration-color: #64C8F0; }
 .line_mira  { text-decoration-color: #2C35BD; }
 .line_rai   { text-decoration-color: #DCFF50; }
@@ -195,16 +197,20 @@ b.honey {
 
 /* 本文 */
 .mnbox p {
-  margin: 0 0 0;
+  margin: 0;
 }
 
+.mnbox p + p {
+  margin-top: 0.9em;
+}
 .mnbox p:last-child {
   margin-bottom: 0;
 }
 
 .mn-divider {
   text-align: center;
-  margin: 1.5em 0;
+  margin: 0.8em 0;
+  line-height: 1;
 }
 
 .mn-divider::before {
@@ -214,14 +220,14 @@ b.honey {
 
 /* なうぷれ */
 .nupr {
-  margin: 0.3em auto 0;
+  margin: 0.4em auto 0;
+  line-height: 1.3;
   padding: 0.2em 0.8em;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 999px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(255, 226, 138, 0.35);
   font-size: 0.85em;
-  line-height: 1.4;
 }
 
 /* ===== なうぷれ文字（Safari対策込み） ===== */
