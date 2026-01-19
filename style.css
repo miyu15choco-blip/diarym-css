@@ -250,62 +250,32 @@ b.honey {
   text-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
 }
 
-/* ==========================
-   なうぷれ
-========================= */
-
 .nupr {
-  z-index: 2;
   position: relative;
-  width: 100%;
-  margin: 0 !important;
-  padding: 0.2em 0 0.6em !important;
-  font-size: 11px;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
-  font-family: 'Niramit', 'Microsoft YaHei', メイリオ, sans-serif;
-  overflow-x: hidden;
-  overflow-y: visible;
-  white-space: nowrap;
+  padding: 0.25em 0 0.6em;
 }
 
-/* 蜂蜜の余韻 */
 .nupr::after {
   content: "";
   position: absolute;
-  left: 10%;
-  right: 10%;
+  left: 12%;
+  right: 12%;
   bottom: 0;
-  height: 5px;
+
+  height: 6px;
   border-radius: 999px;
+
+  /* 少しだけ彩度を上げる */
   background:
     radial-gradient(
       ellipse at center,
-      rgba(255, 226, 138, 0.5),
-      rgba(255, 226, 138, 0.25) 45%,
-      rgba(255, 226, 138, 0.1) 65%,
-      rgba(255, 226, 138, 0)
+      rgba(255, 210, 90, 0.55),
+      rgba(255, 210, 90, 0.3) 45%,
+      rgba(255, 210, 90, 0.12) 65%,
+      rgba(255, 210, 90, 0)
     );
 
-  filter: blur(0.6px);
-  z-index: 0;
-}
-
-/* 流れる文字 */
-.nupr-text {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  white-space: nowrap;
-  padding-left: 100%;
-  animation: nupr 28s linear infinite;
-  color: #666;
-}
-
-/* スクロール */
-@keyframes nupr {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  filter: blur(0.4px);
 }
 
 
