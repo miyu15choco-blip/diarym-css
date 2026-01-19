@@ -251,31 +251,15 @@ b.honey {
 }
 
 /* ==========================
-   なうぷれ：柔らか下線版
+   なうぷれ：文字だけ＋柔らか下線
    ========================== */
 
 .nupr {
-  writing-mode: horizontal-tb !important;
-  direction: ltr;
-
-  background: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  position: relative;
+  width: 100%;
 
   margin: 0 !important;
-  padding: 0.25em 0 0.35em !important; /* 下に少し呼吸 */
-
-  /* 蜂蜜色を「線」じゃなく「気配」に */
-  border-bottom: none;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 226, 138, 0),
-    rgba(255, 226, 138, 0.55),
-    rgba(255, 226, 138, 0)
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-position: left bottom;
+  padding: 0.25em 0 0.5em !important;
 
   overflow: hidden;
   white-space: nowrap;
@@ -284,28 +268,40 @@ b.honey {
   line-height: 1.5;
 }
 
+/* 蜂蜜色の余韻ライン */
+.nupr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px; /* ← 見える太さ */
+  background: linear-gradient(
+    to right,
+    rgba(255, 226, 138, 0),
+    rgba(255, 226, 138, 0.55),
+    rgba(255, 226, 138, 0)
+  );
+}
+
 /* 流れる文字 */
 .nupr-text {
-  writing-mode: horizontal-tb !important;
-  text-orientation: mixed !important;
-  direction: ltr;
-
   display: inline-block;
   white-space: nowrap;
 
   padding-left: 100%;
   animation: nupr 24s linear infinite;
 
-  color: #777; /* 少し薄く */
-  letter-spacing: 0.03em; /* 空気感 */
+  color: #777;
+  letter-spacing: 0.03em;
 
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  writing-mode: horizontal-tb;
 }
 
-/* アニメーション */
+/* スクロール */
 @keyframes nupr {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
