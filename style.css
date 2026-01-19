@@ -237,40 +237,103 @@ b.honey {
 /* 会話変更ライン */
 .mn-divider {
   text-align: center;
-  margin: 1.6em 0;
-  font-size: 0.85em;
+  margin: 1.8em 0;
   color: #ffe28a;
-  letter-spacing: 0.55em;
+  font-size: 0.85em;
+  letter-spacing: 0.18em;
   opacity: 0.9;
 }
 
 .mn-divider::before {
-  content: "⎔ − ⬣ − ⎔";
+  content: "⎔••┈┈┈┈•• ⎔ ••┈┈┈┈••⎔";
   display: inline-block;
-  transform: translateY(1px);
+  text-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
 }
 
 /* なうぷれ */
+/* =========================
+   なうぷれ（ミニ音楽プレイヤー）
+========================= */
+
 .nupr {
-  margin: 0.4em auto 0;
-  line-height: 1.3;
-  padding: 0.2em 0.8em;
-  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+
+  margin: 0.6em auto 0;
+  padding: 0.35em 0.9em;
+
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(255, 226, 138, 0.35);
+
+  box-shadow:
+    0 4px 8px rgba(255, 220, 140, 0.25);
+
   font-size: 0.85em;
+  line-height: 1.3;
+  color: #666;
+
+  overflow: hidden;
 }
 
-/* ===== なうぷれ文字（Safari対策込み） ===== */
+/* 六角形（大きめ・蜂の巣モチーフ） */
+.nupr::before {
+  content: "⬢";
+  font-size: 1.3em;
+  line-height: 1;
+  color: rgba(230, 200, 110, 0.45);
+  flex-shrink: 0;
+  transform: translateY(0.05em);
+}
+
+/* 再生中：六角形がほんのり明るくなる */
+.nupr.is-playing::before {
+  animation: honey-glow 3.2s ease-in-out infinite;
+}
+
+@keyframes honey-glow {
+  0%, 100% {
+    color: rgba(230, 200, 110, 0.45);
+    text-shadow: none;
+  }
+  50% {
+    color: rgba(255, 215, 120, 0.9);
+    text-shadow:
+      0 0 4px rgba(255, 215, 120, 0.45),
+      0 0 10px rgba(255, 215, 120, 0.25);
+  }
+}
+
+/* 再生ボタン */
+.nupr-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: #e6c86e;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+/* 流れる曲名 */
 .nupr-text {
   display: inline-block;
   padding-left: 100%;
   white-space: nowrap;
-  animation: nupr 22s linear infinite;
+  animation: nupr-scroll 22s linear infinite;
+
   color: #666;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+/* 流れるアニメーション */
+@keyframes nupr-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* ===== 流れるアニメーション ===== */
