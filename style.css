@@ -60,10 +60,10 @@ h2::after {
   content: "";
   display: block;
   width: 3em;
-  height: 0.7em;
-  margin-top: -0.35em;
-  background: rgba(255, 226, 138, 0.3);
-  filter: blur(7px);
+  height: 0.45em;
+  margin-top: -0.25em;
+  background: rgba(255, 226, 138, 0.25);
+  filter: blur(5px);
   border-radius: 999px;
 }
 
@@ -247,40 +247,6 @@ b.honey {
   content: "⎔ − ⬣";
 }
 
-.mn-divider::after {
-  content: "⬣ − ⎔";
-}
-
-.mn-divider {
-  font-size: 0.85em;
-}
-
-.mn-divider::before,
-.mn-divider::after {
-  letter-spacing: 0.25em;
-}
-
-/* 中央 */
-.mn-divider::before {
-  margin-right: 0.2em;
-}
-
-.mn-divider::after {
-  margin-left: 0.2em;
-}
-
-/* 中央の⎔ */
-.mn-divider::after {
-  position: relative;
-}
-
-.mn-divider::after::before {
-  content: "";
-  font-size: 1.2em;
-  position: absolute;
-  left: -1.35em;
-}
-
 /* なうぷれ */
 .nupr {
   margin: 0.4em auto 0;
@@ -365,7 +331,7 @@ b.honey {
   margin: 0.7em 0 0;
   padding: 1em 1.2em;
   background: #ffffff;
-  border-radius: 14px 14px 18px 18px;
+  border-radius: 14px 14px 20px 20px;
   font-size: 0.9em;
   line-height: 1.9;
   box-shadow:
@@ -383,13 +349,11 @@ b.honey {
   background: #ffffff;
   border-radius: 20px;
 
-  /* 主張しすぎないフレーム */
   border: 1px solid rgba(100, 200, 240, 0.28);
 
-  /* ほんのり奥行き */
   box-shadow:
     0 6px 18px rgba(100, 200, 240, 0.08),
-    0 0 0 6px rgba(100, 200, 240, 0.04);
+    0 8px 20px rgba(255, 226, 138, 0.18);
 
   line-height: 1.85;
   letter-spacing: 0.05em;
