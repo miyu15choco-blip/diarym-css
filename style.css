@@ -259,7 +259,7 @@ b.honey {
   width: 100%;
 
   margin: 0 !important;
-  padding: 0.3em 0 0.6em !important;
+  padding: 0.15em 0 0.35em !important;
 
   overflow: hidden;
   white-space: nowrap;
@@ -268,28 +268,18 @@ b.honey {
   line-height: 1.5;
 }
 
-/* 蜂蜜の余韻（下線） */
 .nupr::after {
-  content: "";
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 0;
-
-  height: 6px;               /* ← 太さ＝粘度 */
-  border-radius: 999px;      /* ← 丸み */
-
+  height: 5px;
   background:
     radial-gradient(
       ellipse at center,
-      rgba(255, 226, 138, 0.65),
-      rgba(255, 226, 138, 0.35) 40%,
-      rgba(255, 226, 138, 0.15) 60%,
-      rgba(255, 226, 138, 0.05) 75%,
+      rgba(255, 226, 138, 0.45),
+      rgba(255, 226, 138, 0.28) 40%,
+      rgba(255, 226, 138, 0.12) 60%,
+      rgba(255, 226, 138, 0.04) 75%,
       rgba(255, 226, 138, 0)
     );
-
-  filter: blur(0.3px);       /* ← にじみ */
+  filter: blur(0.6px);
 }
 
 /* 流れる文字 */
@@ -298,10 +288,10 @@ b.honey {
   white-space: nowrap;
 
   padding-left: 100%;
-  animation: nupr 26s linear infinite;
+  animation: nupr 30s ease-in-out infinite;
 
   color: #777;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
 
   writing-mode: horizontal-tb;
 }
