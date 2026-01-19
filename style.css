@@ -70,7 +70,7 @@ h3 {
   font-weight: normal;
   color: #7fbfe6;
   letter-spacing: 0.1em;
-  margin: 1.1em 0 0.35em;
+  margin: 0.8em 0 0.25em;
   line-height: 1.2;
   transform: translateY(-1px);
 }
@@ -180,8 +180,8 @@ b.honey {
 .mnbox {
   position: relative;
   max-width: 680px;
-  margin: 1.6em auto;
-  padding: 1.2em 1.4em;
+  margin: 1.1em auto;
+  padding: 0.9em 1.4em 1.2em;
   background-color: #ffffff;
   border-radius: 22px;
   line-height: 2.1;
@@ -237,7 +237,7 @@ b.honey {
 /* 会話変更ライン */
 .mn-divider {
   text-align: center;
-  margin: 1.8em 0;
+  margin: 1.2em 0 1.1em;
   color: #ffe28a;
   font-size: 1em;
   letter-spacing: 0.18em;
