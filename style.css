@@ -251,35 +251,40 @@ b.honey {
 }
 
 /* ==========================
-   なうぷれ
+   なうぷれ：下線だけ・横一行固定
    ========================== */
 
 .nupr {
-  /* 既存カプセルUIを無効化 */
+  /* 横書き強制（保険） */
+  writing-mode: horizontal-tb !important;
+  direction: ltr;
+
   background: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 
-  /* 余白を最小に */
   margin: 0 !important;
   padding: 0.2em 0 !important;
 
-  /* 下にだけ蜂蜜色ライン */
   border-bottom: 1px solid rgba(255, 226, 138, 0.6);
 
-  /* 一行表示 */
   overflow: hidden;
   white-space: nowrap;
+
   font-size: 0.85em;
   line-height: 1.4;
 }
 
-/* 流れる文字（Safari対策込み） */
+/* ★ここが重要 */
 .nupr-text {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  direction: ltr;
+
   display: inline-block;
-  padding-left: 100%;
   white-space: nowrap;
 
+  padding-left: 100%;
   animation: nupr 22s linear infinite;
 
   color: #666;
@@ -289,12 +294,8 @@ b.honey {
 
 /* 流れるアニメーション */
 @keyframes nupr {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 /* ───────────────
