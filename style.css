@@ -67,18 +67,22 @@ h2::after {
 }
 
 h3 {
-  font-family: 'Niramit', sans-serif;
-  font-size: 13.5px;
-  letter-spacing: 0.12em;
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-size: 14.5px;
+  font-weight: normal;
   color: #7fbfe6;
-  margin: 1.2em 0 0.4em;
+  letter-spacing: 0.1em;
+
+  margin: 1.1em 0 0.35em;   /* 感覚を詰める */
+  line-height: 1.2;
+  transform: translateY(-1px);
 }
 
-/* ⬢ 蜂の巣マーク */
 h3::before {
-  content: "⬢";
-  color: #ffe28a;
-  font-size: 0.85em;
+  content: "⎔";
+  margin-right: 0.32em;     /* 蜂との距離 */
+  transform: translateY(0.05em);
+  display: inline-block;
 }
 
 b {
