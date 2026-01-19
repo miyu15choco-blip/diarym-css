@@ -257,60 +257,62 @@ b.honey {
 .nupr {
   display: flex;
   align-items: center;
-  gap: 0.7em;
+  justify-content: center;
+  gap: 1em;
 
-  max-width: 360px;
+  max-width: 420px;
   margin: 1.2em auto;
+  padding: 0.7em 1.2em;
 
-  padding: 0.5em 0.8em;
+  background: rgba(255,255,255,0.95);
+  border-radius: 999px;
 
-  background: transparent;
   font-size: 0.85em;
   color: #666;
 }
 
-/* 六角形 */
+/* 六角形：存在感を出す */
 .nupr-hex {
-  font-size: 1.4em;
-  color: rgba(230, 200, 110, 0.45);
+  font-size: 1.9em;              /* ← 大きく */
+  color: rgba(230,200,110,0.5);
   flex-shrink: 0;
 }
 
 /* 再生中だけ、ほんのり明るく */
 .nupr.is-playing .nupr-hex {
-  animation: honey-glow-soft 4.8s ease-in-out infinite;
+  animation: honey-glow-soft 5s ease-in-out infinite;
 }
 
 @keyframes honey-glow-soft {
   0%,100% {
-    color: rgba(230, 200, 110, 0.45);
+    color: rgba(230,200,110,0.45);
   }
   50% {
-    color: rgba(242, 200, 91, 0.85);
+    color: rgba(242,200,91,0.85);
   }
 }
 
-/* コントロール（文字記号） */
-.nupr-controls {
-  font-family: 'Niramit', sans-serif;
-  font-size: 0.85em;
-  letter-spacing: 0.25em;
-  color: #aaa;
-  flex-shrink: 0;
-}
-
-/* テキスト表示枠 */
+/* 曲名エリア：中央の主役 */
 .nupr-text-wrap {
   overflow: hidden;
-  flex: 1;
+  min-width: 0;
+  text-align: center;
 }
 
-/* 流れる曲名 */
 .nupr-text {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: nupr-scroll 22s linear infinite;
+  animation: nupr-scroll 24s linear infinite;
+}
+
+/* 操作：溶け込ませる */
+.nupr-controls {
+  font-family: inherit;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  color: #bbb;
+  flex-shrink: 0;
 }
 
 /* スクロール */
