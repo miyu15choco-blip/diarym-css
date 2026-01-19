@@ -250,10 +250,6 @@ b.honey {
   text-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
 }
 
-/* =========================
-   なうぷれ（ミニ音楽プレイヤー）
-========================= */
-
 /* ==========================
    Now Playing
    ========================== */
@@ -263,53 +259,47 @@ b.honey {
   align-items: center;
   gap: 0.7em;
 
-  margin: 0.6em auto 0;
-  padding: 0.5em 1em;
+  max-width: 360px;
+  margin: 1.2em auto;
 
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 999px;
+  padding: 0.5em 0.8em;
 
-  box-shadow: 0 4px 8px rgba(255, 220, 140, 0.25);
-
+  background: transparent;
   font-size: 0.85em;
   color: #666;
 }
 
-/* 六角形アイコン */
+/* 六角形 */
 .nupr-hex {
-  font-size: 1.45em;
+  font-size: 1.4em;
   color: rgba(230, 200, 110, 0.45);
   flex-shrink: 0;
 }
 
+/* 再生中だけ、ほんのり明るく */
 .nupr.is-playing .nupr-hex {
-  animation: honey-glow 3.2s ease-in-out infinite;
+  animation: honey-glow-soft 4.8s ease-in-out infinite;
 }
 
-@keyframes honey-glow {
-  0%, 100% {
+@keyframes honey-glow-soft {
+  0%,100% {
     color: rgba(230, 200, 110, 0.45);
-    text-shadow: none;
   }
   50% {
-    color: rgba(255, 215, 120, 0.9);
-    text-shadow:
-      0 0 4px rgba(255, 215, 120, 0.4),
-      0 0 10px rgba(255, 215, 120, 0.25);
+    color: rgba(242, 200, 91, 0.85);
   }
 }
 
-/* 再生コントロール */
+/* コントロール（文字記号） */
 .nupr-controls {
-  font-family: 'Niramit', sans-serif; /* 記号の崩れ防止 */
-  font-size: 0.9em;
-  font-weight: 600;
-  color: #e6c86e;
-  letter-spacing: 0.05em;
+  font-family: 'Niramit', sans-serif;
+  font-size: 0.85em;
+  letter-spacing: 0.25em;
+  color: #aaa;
   flex-shrink: 0;
 }
 
-/* テキスト表示エリア */
+/* テキスト表示枠 */
 .nupr-text-wrap {
   overflow: hidden;
   flex: 1;
@@ -321,10 +311,9 @@ b.honey {
   white-space: nowrap;
   padding-left: 100%;
   animation: nupr-scroll 22s linear infinite;
-  color: #666;
 }
 
-/* スクロールアニメーション */
+/* スクロール */
 @keyframes nupr-scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
