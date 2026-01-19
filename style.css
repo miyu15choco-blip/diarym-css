@@ -367,50 +367,60 @@ b.honey {
 ========================= */
 .listbox {
   max-width: 680px;
-  margin: 2.4em auto;
-  padding: 1.9em 2.1em;
+  margin: 2.2em auto;
+  padding: 1.6em 1.9em;
 
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 18px;
 
-  border: 1px solid rgba(100, 200, 240, 0.28);
+  /* 枠は“存在するかしないか”レベル */
+  border: 1px solid rgba(255, 255, 255, 0.9);
 
+  /* 蜂蜜だけの影 */
   box-shadow:
-    0 6px 18px rgba(100, 200, 240, 0.08),
-    0 8px 20px rgba(255, 226, 138, 0.18);
+    0 8px 22px rgba(255, 226, 138, 0.28),
+    0 14px 36px rgba(255, 226, 138, 0.16);
 
-  line-height: 1.85;
-  letter-spacing: 0.05em;
-  color: #8a6b00;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #555;
+
+  white-space: pre-line;
 }
 
 /* =========================
-   セクションラベル
+   セクションラベル（蜂蜜統一）
 ========================= */
 .list-head {
-  margin: 1.6em 0 0.6em;
+  margin: 1.4em 0 0.5em;
 }
 
 .list-head b {
   display: inline-block;
-  padding: 0.3em 1em;
+  padding: 0.25em 0.9em;
   border-radius: 999px;
 
-  background: #f5f8fb;      /* ほぼ白のくすみ水色 */
-  color: #5e6e7a;           /* 青みグレー文字 */
+  /* 白＋蜂蜜のうっすら膜 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 226, 138, 0.22)
+  );
 
-  font-size: 0.85em;
+  color: #666;              /* 文字はグレー固定 */
+  font-size: 0.82em;
   font-weight: normal;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
 
-  box-shadow: 0 1px 4px rgba(100, 200, 240, 0.12);
+  box-shadow: none;         /* 影は使わない */
 }
 
+/* ラベル前の記号だけ蜂蜜色 */
 .list-head b::before {
   content: "⬣";
-  margin-right: 0.45em;
-  color: #e6c86e;           /* くすみイエロー */
-  font-size: 1em;
+  margin-right: 0.4em;
+  color: rgba(255, 226, 138, 0.9);
+  font-size: 0.95em;
 }
 
 /* =========================
