@@ -255,64 +255,23 @@ b.honey {
    ========================== */
 
 .nupr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-
   max-width: 420px;
   margin: 1.2em auto;
-  padding: 0.7em 1.2em;
-
-  background: rgba(255,255,255,0.95);
-  border-radius: 999px;
-
   font-size: 0.85em;
-  color: #666;
+  color: #777;
 }
 
-/* 六角形：存在感を出す */
-.nupr-hex {
-  font-size: 1.9em;              /* ← 大きく */
-  color: rgba(230,200,110,0.5);
-  flex-shrink: 0;
-}
-
-/* 再生中だけ、ほんのり明るく */
-.nupr.is-playing .nupr-hex {
-  animation: honey-glow-soft 5s ease-in-out infinite;
-}
-
-@keyframes honey-glow-soft {
-  0%,100% {
-    color: rgba(230,200,110,0.45);
-  }
-  50% {
-    color: rgba(242,200,91,0.85);
-  }
-}
-
-/* 曲名エリア：中央の主役 */
+/* 表示枠 */
 .nupr-text-wrap {
   overflow: hidden;
-  min-width: 0;
-  text-align: center;
+  white-space: nowrap;
 }
 
+/* 流れるテキスト */
 .nupr-text {
   display: inline-block;
-  white-space: nowrap;
   padding-left: 100%;
-  animation: nupr-scroll 24s linear infinite;
-}
-
-/* 操作：溶け込ませる */
-.nupr-controls {
-  font-family: inherit;
-  font-size: 0.8em;
-  letter-spacing: 0.2em;
-  color: #bbb;
-  flex-shrink: 0;
+  animation: nupr-scroll 26s linear infinite;
 }
 
 /* スクロール */
