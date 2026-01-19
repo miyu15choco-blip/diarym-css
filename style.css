@@ -39,8 +39,6 @@ h2 {
   letter-spacing: 0em;
   margin: 1.2em 0 0.4em;
   position: relative;
-
-  /* 蜂蜜っぽい浮き感 */
   text-shadow:
     0 1px 0 rgba(255,255,255,0.9),
     0 6px 16px rgba(255, 226, 138, 0.35);
@@ -72,15 +70,14 @@ h3 {
   font-weight: normal;
   color: #7fbfe6;
   letter-spacing: 0.1em;
-
-  margin: 1.1em 0 0.35em;   /* 感覚を詰める */
+  margin: 1.1em 0 0.35em;
   line-height: 1.2;
   transform: translateY(-1px);
 }
 
 h3::before {
   content: "⎔";
-  margin-right: 0.32em;     /* 蜂との距離 */
+  margin-right: 0.32em;
   transform: translateY(0.05em);
   display: inline-block;
 }
@@ -184,7 +181,7 @@ b.honey {
   position: relative;
   max-width: 680px;
   margin: 1.6em auto;
-  padding: 1.8em 2.2em 2.2em; /* 上を少し詰める */
+  padding: 1.8em 2.2em 2.2em;
   background-color: #ffffff;
   border-radius: 22px;
   line-height: 2.1;
