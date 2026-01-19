@@ -250,9 +250,24 @@ b.honey {
   text-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
 }
 
+/* ==========================
+   Now Playing
+========================= */
+
 .nupr {
   position: relative;
+  width: 100%;
+  margin: 0;
   padding: 0.25em 0 0.6em;
+
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  font-family: 'Niramit', 'Microsoft YaHei', メイリオ, sans-serif;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+  white-space: nowrap;
 }
 
 .nupr::after {
@@ -264,20 +279,27 @@ b.honey {
 
   height: 6px;
   border-radius: 999px;
-
-  /* 少しだけ彩度を上げる */
   background:
     radial-gradient(
       ellipse at center,
-      rgba(255, 210, 90, 0.55),
-      rgba(255, 210, 90, 0.3) 45%,
-      rgba(255, 210, 90, 0.12) 65%,
-      rgba(255, 210, 90, 0)
+      rgba(255, 226, 138, 0.55),
+      rgba(255, 226, 138, 0.3) 45%,
+      rgba(255, 226, 138, 0.12) 65%,
+      rgba(255, 226, 138, 0)
     );
-
-  filter: blur(0.4px);
 }
 
+.nupr-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: nupr 28s linear infinite;
+  color: #666;
+}
+
+@keyframes nupr {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 /* ───────────────
    ナイショバナシ
