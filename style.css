@@ -250,7 +250,11 @@ b.honey {
   text-shadow: 0 2px 6px rgba(255, 226, 138, 0.35);
 }
 
-/* なうぷれ */
+/* =========================
+   なうぷれ（ミニ音楽プレイヤー）
+========================= */
+
+
 /* =========================
    なうぷれ（ミニ音楽プレイヤー）
 ========================= */
@@ -258,10 +262,11 @@ b.honey {
 .nupr {
   display: flex;
   align-items: center;
-  gap: 0.8em;
+  justify-content: center; /* 中央固定 */
+  gap: 0.9em;
 
   margin: 0.6em auto 0;
-  padding: 0.35em 0.9em;
+  padding: 0.35em 1em;
 
   background: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
@@ -274,19 +279,19 @@ b.honey {
   color: #666;
 
   overflow: hidden;
+  text-align: center;
 }
 
-/* 六角形（大きめ・蜂の巣モチーフ） */
+/* 六角形（大きめ） */
 .nupr::before {
   content: "⬢";
-  font-size: 1.3em;
+  font-size: 1.35em;
   line-height: 1;
   color: rgba(230, 200, 110, 0.45);
   flex-shrink: 0;
-  transform: translateY(0.05em);
 }
 
-/* 再生中：六角形がほんのり明るくなる */
+/* 再生中だけほんのり発光 */
 .nupr.is-playing::before {
   animation: honey-glow 3.2s ease-in-out infinite;
 }
@@ -299,34 +304,33 @@ b.honey {
   50% {
     color: rgba(255, 215, 120, 0.9);
     text-shadow:
-      0 0 4px rgba(255, 215, 120, 0.45),
+      0 0 4px rgba(255, 215, 120, 0.4),
       0 0 10px rgba(255, 215, 120, 0.25);
   }
 }
 
-/* 再生ボタン */
+/* 再生ボタン（絵文字化防止） */
 .nupr-controls {
   display: flex;
   align-items: center;
-  gap: 0.4em;
-  color: #e6c86e;
+  gap: 0.45em;
+ font-family:"Niramit","Helvetica Neue",Arial,sans-serif;
   font-size: 0.9em;
+  color: #e6c86e;
+  letter-spacing: 0.05em;
   flex-shrink: 0;
 }
 
 /* 流れる曲名 */
 .nupr-text {
   display: inline-block;
-  padding-left: 100%;
   white-space: nowrap;
+  padding-left: 100%;
   animation: nupr-scroll 22s linear infinite;
-
   color: #666;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
-/* 流れるアニメーション */
+/* スクロール */
 @keyframes nupr-scroll {
   0% {
     transform: translateX(0);
@@ -336,15 +340,6 @@ b.honey {
   }
 }
 
-/* ===== 流れるアニメーション ===== */
-@keyframes nupr {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-      }
-}
 
 /* ───────────────
    ナイショバナシ
