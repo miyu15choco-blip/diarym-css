@@ -251,35 +251,32 @@ b.honey {
 }
 
 /* ==========================
-   なうぷれ：蜂蜜の粘度下線
-   ========================== */
+   なうぷれ
+========================= */
+
 .nupr {
   position: relative;
   width: 100%;
-
   margin: 0 !important;
-  padding: 0.2em 0 0.45em !important;
-
-  /* ★本文の影響を切る */
-  font-size: 11px;          /* body 12px より少し小さく */
+  padding: 0.2em 0 0.6em !important;
+  font-size: 11px;
   line-height: 1.4;
-  letter-spacing: 0.05em;
-
-  overflow: hidden;
+  letter-spacing: 0.03em;
+  font-family: 'Niramit', 'Microsoft YaHei', メイリオ, sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
   white-space: nowrap;
 }
 
-/* 蜂蜜の余韻（必ず見える） */
+/* 蜂蜜の余韻 */
 .nupr::after {
   content: "";
   position: absolute;
   left: 10%;
   right: 10%;
   bottom: 0;
-
   height: 5px;
   border-radius: 999px;
-
   background:
     radial-gradient(
       ellipse at center,
@@ -290,20 +287,18 @@ b.honey {
     );
 
   filter: blur(0.6px);
+  z-index: 0;
 }
 
 /* 流れる文字 */
 .nupr-text {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   white-space: nowrap;
-
   padding-left: 100%;
   animation: nupr 28s linear infinite;
-
   color: #666;
-  font-size: inherit;       /* ← ここ重要 */
-  line-height: inherit;
-  letter-spacing: inherit;
 }
 
 /* スクロール */
