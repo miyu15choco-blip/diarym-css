@@ -294,22 +294,24 @@ b.honey {
     );
 }
 
-/* 跳ねる文字 */
 .nupr-text {
   display: inline-block;
   color: #666;
-  animation: nupr-bounce 2.8s ease-in-out infinite;
+
+  animation: nupr-bounce 2.2s cubic-bezier(.4,0,.2,1) infinite;
 }
 
-/* ぴょんぴょん（控えめ） */
 @keyframes nupr-bounce {
-  0%, 100% {
+  0% {
     transform: translateY(0);
   }
-  40% {
-    transform: translateY(-2px);
+  25% {
+    transform: translateY(-4px); /* ← 高くする */
   }
-  55% {
+  45% {
+    transform: translateY(0);
+  }
+  100% {
     transform: translateY(0);
   }
 }
