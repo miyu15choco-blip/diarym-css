@@ -253,10 +253,14 @@ b.honey {
 /* =========================
    なうぷれ（ミニ音楽プレイヤー）
 ========================= */
+
+/* ==========================
+   Now Playing
+   ========================== */
+
 .nupr {
   display: flex;
   align-items: center;
-  justify-content: center; /* 全体を中央固定 */
   gap: 0.7em;
 
   margin: 0.6em auto 0;
@@ -269,15 +273,12 @@ b.honey {
 
   font-size: 0.85em;
   color: #666;
-  overflow: hidden;
 }
 
-/* 六角形 */
+/* 六角形アイコン */
 .nupr-hex {
-  display: inline-block;
-  content: "⬢";
-  font-size: 1.45em;  /* 大きめ */
-  color: rgba(230,200,110,0.45);
+  font-size: 1.45em;
+  color: rgba(230, 200, 110, 0.45);
   flex-shrink: 0;
 }
 
@@ -286,24 +287,32 @@ b.honey {
 }
 
 @keyframes honey-glow {
-  0%,100% {
-    color: rgba(230,200,110,0.45);
+  0%, 100% {
+    color: rgba(230, 200, 110, 0.45);
     text-shadow: none;
   }
   50% {
-    color: rgba(255,215,120,0.9);
-    text-shadow: 0 0 4px rgba(255,215,120,0.4),
-                 0 0 10px rgba(255,215,120,0.25);
+    color: rgba(255, 215, 120, 0.9);
+    text-shadow:
+      0 0 4px rgba(255, 215, 120, 0.4),
+      0 0 10px rgba(255, 215, 120, 0.25);
   }
 }
 
-/* 再生ボタン */
+/* 再生コントロール */
 .nupr-controls {
-  font-family: 'Niramit', sans-serif; /* 絵文字化防止 */
+  font-family: 'Niramit', sans-serif; /* 記号の崩れ防止 */
   font-size: 0.9em;
+  font-weight: 600;
   color: #e6c86e;
   letter-spacing: 0.05em;
   flex-shrink: 0;
+}
+
+/* テキスト表示エリア */
+.nupr-text-wrap {
+  overflow: hidden;
+  flex: 1;
 }
 
 /* 流れる曲名 */
@@ -315,12 +324,11 @@ b.honey {
   color: #666;
 }
 
-/* スクロール */
+/* スクロールアニメーション */
 @keyframes nupr-scroll {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
-
 
 /* ───────────────
    ナイショバナシ
