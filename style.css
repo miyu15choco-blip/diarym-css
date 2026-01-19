@@ -251,11 +251,10 @@ b.honey {
 }
 
 /* ==========================
-   なうぷれ：下線だけ・横一行固定
+   なうぷれ：柔らか下線版
    ========================== */
 
 .nupr {
-  /* 横書き強制（保険） */
   writing-mode: horizontal-tb !important;
   direction: ltr;
 
@@ -264,18 +263,28 @@ b.honey {
   box-shadow: none !important;
 
   margin: 0 !important;
-  padding: 0.2em 0 !important;
+  padding: 0.25em 0 0.35em !important; /* 下に少し呼吸 */
 
-  border-bottom: 1px solid rgba(255, 226, 138, 0.6);
+  /* 蜂蜜色を「線」じゃなく「気配」に */
+  border-bottom: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 226, 138, 0),
+    rgba(255, 226, 138, 0.55),
+    rgba(255, 226, 138, 0)
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: left bottom;
 
   overflow: hidden;
   white-space: nowrap;
 
   font-size: 0.85em;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* ★ここが重要 */
+/* 流れる文字 */
 .nupr-text {
   writing-mode: horizontal-tb !important;
   text-orientation: mixed !important;
@@ -285,14 +294,16 @@ b.honey {
   white-space: nowrap;
 
   padding-left: 100%;
-  animation: nupr 22s linear infinite;
+  animation: nupr 24s linear infinite;
 
-  color: #666;
+  color: #777; /* 少し薄く */
+  letter-spacing: 0.03em; /* 空気感 */
+
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-/* 流れるアニメーション */
+/* アニメーション */
 @keyframes nupr {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
