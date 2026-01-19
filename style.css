@@ -251,7 +251,7 @@ b.honey {
 }
 
 /* ==========================
-   なうぷれ：文字だけ＋柔らか下線
+   なうぷれ：蜂蜜の粘度下線
    ========================== */
 
 .nupr {
@@ -259,7 +259,7 @@ b.honey {
   width: 100%;
 
   margin: 0 !important;
-  padding: 0.25em 0 0.5em !important;
+  padding: 0.3em 0 0.6em !important;
 
   overflow: hidden;
   white-space: nowrap;
@@ -268,21 +268,28 @@ b.honey {
   line-height: 1.5;
 }
 
-/* 蜂蜜色の余韻ライン */
+/* 蜂蜜の余韻（下線） */
 .nupr::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 8%;
+  right: 8%;
   bottom: 0;
 
-  height: 2px; /* ← 見える太さ */
-  background: linear-gradient(
-    to right,
-    rgba(255, 226, 138, 0),
-    rgba(255, 226, 138, 0.55),
-    rgba(255, 226, 138, 0)
-  );
+  height: 6px;               /* ← 太さ＝粘度 */
+  border-radius: 999px;      /* ← 丸み */
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 226, 138, 0.65),
+      rgba(255, 226, 138, 0.35) 40%,
+      rgba(255, 226, 138, 0.15) 60%,
+      rgba(255, 226, 138, 0.05) 75%,
+      rgba(255, 226, 138, 0)
+    );
+
+  filter: blur(0.3px);       /* ← にじみ */
 }
 
 /* 流れる文字 */
@@ -291,7 +298,7 @@ b.honey {
   white-space: nowrap;
 
   padding-left: 100%;
-  animation: nupr 24s linear infinite;
+  animation: nupr 26s linear infinite;
 
   color: #777;
   letter-spacing: 0.03em;
@@ -304,6 +311,8 @@ b.honey {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+
 
 /* ───────────────
    ナイショバナシ
