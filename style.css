@@ -253,32 +253,42 @@ b.honey {
 /* ==========================
    なうぷれ：蜂蜜の粘度下線
    ========================== */
-
 .nupr {
   position: relative;
   width: 100%;
 
   margin: 0 !important;
-  padding: 0.15em 0 0.35em !important;
+  padding: 0.2em 0 0.45em !important;
+
+  /* ★本文の影響を切る */
+  font-size: 11px;          /* body 12px より少し小さく */
+  line-height: 1.4;
+  letter-spacing: 0.05em;
 
   overflow: hidden;
   white-space: nowrap;
-
-  font-size: 0.85em;
-  line-height: 1.5;
 }
 
+/* 蜂蜜の余韻（必ず見える） */
 .nupr::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+
   height: 5px;
+  border-radius: 999px;
+
   background:
     radial-gradient(
       ellipse at center,
-      rgba(255, 226, 138, 0.45),
-      rgba(255, 226, 138, 0.28) 40%,
-      rgba(255, 226, 138, 0.12) 60%,
-      rgba(255, 226, 138, 0.04) 75%,
+      rgba(255, 226, 138, 0.5),
+      rgba(255, 226, 138, 0.25) 45%,
+      rgba(255, 226, 138, 0.1) 65%,
       rgba(255, 226, 138, 0)
     );
+
   filter: blur(0.6px);
 }
 
@@ -288,12 +298,12 @@ b.honey {
   white-space: nowrap;
 
   padding-left: 100%;
-  animation: nupr 30s ease-in-out infinite;
+  animation: nupr 28s linear infinite;
 
-  color: #777;
-  letter-spacing: 0;
-
-  writing-mode: horizontal-tb;
+  color: #666;
+  font-size: inherit;       /* ← ここ重要 */
+  line-height: inherit;
+  letter-spacing: inherit;
 }
 
 /* スクロール */
@@ -301,7 +311,6 @@ b.honey {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
-
 
 
 /* ───────────────
