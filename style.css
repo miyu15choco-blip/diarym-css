@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Niramit');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @font-face {
@@ -31,41 +32,47 @@ h1 {
 }
 
 h2 {
-  font-family: 'Allura', cursive;
-  font-size: 26px;
+  font-family: 'Sacramento', cursive;
+  font-size: 28px;
   font-weight: normal;
   color: #64C8F0;
+
   letter-spacing: 0.12em;
-  margin: 2.2em 0 1.2em;
+  margin: 2.4em 0 1.6em;
   position: relative;
-  padding-bottom: 0.6em;
+
+  /* 蜂蜜っぽい浮き感 */
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.9),
+    0 6px 16px rgba(255, 226, 138, 0.35);
 }
 
-/* 下にとろっとしたライン */
+h2::before {
+  content: "⬢";
+  position: absolute;
+  left: -0.9em;
+  top: 0.15em;
+  font-size: 1.15em;
+  color: rgba(255, 226, 138, 0.4);
+}
+
 h2::after {
   content: "";
   display: block;
-  width: 3.2em;
-  height: 3px;
-  margin-top: 0.4em;
-  background: linear-gradient(
-    to right,
-    rgba(255, 226, 138, 0.8),
-    rgba(255, 226, 138, 0.3)
-  );
+  width: 3em;
+  height: 0.7em;
+  margin-top: -0.35em;
+  background: rgba(255, 226, 138, 0.3);
+  filter: blur(7px);
   border-radius: 999px;
 }
 
 h3 {
-  font-family: 'Caveat', 'Dancing Script', cursive;
-  font-size: 15px;
-  font-weight: normal;
-  color: #7fbfe6;
+  font-family: 'Niramit', sans-serif;
+  font-size: 13.5px;
   letter-spacing: 0.12em;
-  margin: 1.6em 0 0.6em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
+  color: #7fbfe6;
+  margin: 1.2em 0 0.4em;
 }
 
 /* ⬢ 蜂の巣マーク */
