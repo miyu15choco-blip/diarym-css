@@ -255,6 +255,7 @@ b.honey {
 ========================= */
 
 .nupr {
+  z-index: 2;
   position: relative;
   width: 100%;
   margin: 0 !important;
