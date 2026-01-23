@@ -257,6 +257,18 @@ b.honey {
     0 3px 8px rgba(255, 215, 120, 0.45);
 }
 
+p + .mn-divider {
+  margin-bottom: 0;
+}
+
+.mn-divider + p {
+  margin-top: 0;
+}
+
+.mn-divider {
+  margin: 0.4em 0;
+}
+
 
 /* ==========================
    なうぷれ：中央固定・ぴょん強化版
