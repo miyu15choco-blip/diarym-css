@@ -279,31 +279,25 @@ p + .mn-divider {
   position: relative;
   width: 100%;
   text-align: center;
-
   margin: 0;
   padding: 0.3em 0 0.65em;
-
   font-size: 11px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   font-family: 'Allura', 'Niramit', 'Microsoft YaHei', メイリオ, sans-serif;
-
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-/* 蜂蜜の余韻（そのまま） */
+/* アンダーライン */
 .nupr::after {
   content: "";
   position: absolute;
   left: 14%;
   right: 14%;
   bottom: 0;
-
   height: 6px;
   border-radius: 999px;
-
   background:
     radial-gradient(
       ellipse at center,
@@ -316,10 +310,10 @@ p + .mn-divider {
 
 /* 跳ねる文字 */
 .nupr-text {
-  font-family: 'M PLUS Rounded 1c', 'Niramit', sans-serif;
-  letter-spacing: 0.18em;
+  font-family: 'Niramit', 'M PLUS Rounded 1c', sans-serif;
+  letter-spacing: 0.16em;
   display: inline-block;
-  color: #666;
+  color: #64C8F0;
   animation: nupr-bounce 1.9s cubic-bezier(.34,1.56,.64,1) infinite;
 }
 
