@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Niramit');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 @font-face {
     font-family: しねきゃぷしょん;
     src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2') format("woff2");
@@ -315,9 +316,10 @@ p + .mn-divider {
 
 /* 跳ねる文字 */
 .nupr-text {
+  font-family: 'M PLUS Rounded 1c', 'Niramit', sans-serif;
+  letter-spacing: 0.18em;
   display: inline-block;
   color: #666;
-
   animation: nupr-bounce 1.9s cubic-bezier(.34,1.56,.64,1) infinite;
 }
 
