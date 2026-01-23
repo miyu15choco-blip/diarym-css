@@ -337,6 +337,18 @@ p + .mn-divider {
   }
 }
 
+.nupr {
+  margin-top: 0.4em;
+}
+
+p + .nupr {
+  margin-top: 0.2em;
+}
+
+.mn-divider + .nupr {
+  margin-top: 0.3em;
+}
+
 /* ───────────────
    ナイショバナシ
 ──────────────── */
