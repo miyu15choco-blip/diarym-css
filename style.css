@@ -216,6 +216,7 @@ b.honey {
   font-size: 0.95em;
   letter-spacing: 0.12em;
   z-index: 1;
+　overflow: hidden;
 }
 
 /* タイトル前の記号 */
@@ -227,7 +228,7 @@ b.honey {
 
 /* 本文 */
 .mnbox p {
-  margin: 0.45em 0;
+  margin: 0.8em 0;
 }
 
 .mnbox p:first-child {
@@ -236,6 +237,14 @@ b.honey {
 
 .mnbox p:last-child {
   margin-bottom: 0;
+}
+
+.mnbox p + .mn-divider {
+  margin-top: 0;
+}
+
+.mnbox .mn-divider + p {
+  margin-top: 0;
 }
 
 /* 会話変更ライン（見やすさ微調整） */
