@@ -1,46 +1,35 @@
 @charset "UTF-8";
 
-/* =========================
-   Fonts
-========================= */
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Niramit');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-
 @font-face {
-  font-family: しねきゃぷしょん;
-  src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2') format("woff2");
+    font-family: しねきゃぷしょん;
+    src: url('https://cdn.leafscape.be/cinecaption/cinecaption227.woff2') format("woff2");
 }
 
-/* =========================
-   Base
-========================= */
 body {
-  background: #f8fcff;
-  color: #555;
-  font-size: 12px;
-  font-family: 'Dancing Script', 'Caveat', 'Microsoft YaHei', gulim, メイリオ, sans-serif;
-  line-height: 200%;
-  letter-spacing: 2px;
-  margin: 0;
+    background: #f8fcff;
+    color: #555;
+    font-size: 12px;
+    font-family: 'Dancing Script', 'Caveat', 'Microsoft YaHei', gulim, メイリオ, sans-serif;
+    line-height: 200%;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
-a,
-a:hover {
-  color: #64C8F0;
-  text-decoration: none;
+a, a:hover {
+    color: #64C8F0;
+    text-decoration: none;
 }
 
-/* =========================
-   Headings
-========================= */
 h1 {
-  font-family: しねきゃぷしょん;
-  font-size: 18px;
-  margin: 10px 0 20px;
-  font-weight: normal;
-  color: #64C8F0;
+    font-family: しねきゃぷしょん;
+    font-size: 18px;
+    margin: 10px 0 20px;
+    font-weight: normal;
+    color: #64C8F0;
 }
 
 h2 {
@@ -48,6 +37,7 @@ h2 {
   font-size: 28px;
   font-weight: normal;
   color: #64C8F0;
+  letter-spacing: 0em;
   margin: 0.6em 0 0.2em;
   position: relative;
   text-shadow:
@@ -60,6 +50,7 @@ h2::before {
   position: absolute;
   left: -0.9em;
   top: 0.15em;
+  font-size: 1em;
   color: rgba(255, 226, 138, 0.4);
 }
 
@@ -88,6 +79,7 @@ h3 {
 h3::before {
   content: "⎔";
   margin-right: 0.32em;
+  transform: translateY(0.05em);
   display: inline-block;
 }
 
@@ -95,137 +87,408 @@ h3 + p {
   margin-top: 0;
 }
 
-/* =========================
-   Text Decoration
-========================= */
 b {
-  background: #c0e7ff;
-  margin: 3px;
-  padding: 0 2px;
-  font-weight: normal;
+    background: #c0e7ff;
+    margin: 3px;
+    padding: 0 2px;
+    font-weight: normal;
 }
 
-.honey,
-b.honey {
+.honey {
   background: linear-gradient(transparent 60%, rgba(245,200,66,0.35) 60%);
   color: #f5c842;
 }
 
-/* =========================
-   Layout Blocks
-========================= */
+b.honey {
+  background: linear-gradient(
+    transparent 60%,
+    rgba(245, 200, 66, 0.35) 60%
+  );
+  padding: 0 2px;
+  font-weight: normal;
+}
+
 .wrp {
-  max-width: 300px;
-  margin: 50px auto 10px;
+    max-width: 300px;
+    margin: 50px auto 10px;
 }
 
 .top {
-  background: #f0f8ff;
-  padding: 15px;
-  border-left: 2px solid #64C8F0;
-  border-right: 2px solid #64C8F0;
+    background: #f0f8ff;
+    margin: 0 auto;
+    padding: 15px;
+    border-right: solid #64C8F0 2px;
+    border-left: solid #64C8F0 2px;
 }
 
-/* =========================
-   Menu
-========================= */
 .menu {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  margin: 15px 0;
-  background: #64C8F0;
-  text-align: center;
+    display: table;
+    table-layout: fixed;
+    background: #64C8F0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .menu li {
-  display: table-cell;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .menu li a {
-  display: block;
-  padding: 5px 0;
-  color: #fff;
-  text-transform: uppercase;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+    text-transform: uppercase;
 }
 
-.menu li a:hover {
-  background: #a0d0f0;
+.menu li a:hover, .menu li a:active {
+    background: #a0d0f0;
+    display: block;
+    padding: 5px 0;
 }
 
-/* =========================
-   Diary Box
-========================= */
+.bt {
+    background: #b0e0ff;
+    color: #fff;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.box {
+    background: #eef6fc;
+    border: solid #fff 1px;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* ラインマーカー　*/
+[class^="line_"] {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: none;
+}
+
+.line_mn    { text-decoration-color: #64C8F0; }
+.line_mira  { text-decoration-color: #2C35BD; }
+.line_rai   { text-decoration-color: #DCFF50; }
+.line_mel   { text-decoration-color: #EB4682; }
+.line_rito  { text-decoration-color: #FAC31E; }
+.line_tetsu { text-decoration-color: #8C4664; }
+.line_rou   { text-decoration-color: #5A5FAA; }
+
+/* 日記本文用ボックス　*/
 .mnbox {
   position: relative;
   max-width: 680px;
   margin: 1.1em auto;
   padding: 0.9em 1.4em 1.2em;
-  background: #fff;
+  background-color: #ffffff;
   border-radius: 22px;
   line-height: 2.1;
   letter-spacing: 0.05em;
+  color: #555;
   box-shadow: 0 8px 22px rgba(100, 200, 240, 0.08);
 }
 
+/* 点線枠 */
 .mnbox::before {
   content: "";
   position: absolute;
   inset: 0;
   border: 1.5px dotted rgba(100, 200, 240, 0.6);
   border-radius: 22px;
+  pointer-events: none;
 }
 
+/* 左上タイトル */
+.mnbox .mn-title {
+  position: absolute;
+  top: -0.9em;
+  left: 1.4em;
+  padding: 0.22em 1em 0.22em 0.8em;
+  background: #ffffff;
+  border-radius: 999px;
+  color: #64C8F0;
+  font-size: 0.95em;
+  letter-spacing: 0.12em;
+  z-index: 1;
+}
+
+/* タイトル前の記号 */
+.mnbox .mn-title::before {
+  content: "⬣";
+  color: #ffe28a;
+  margin-right: 0.45em;
+}
+
+/* 本文 */
 .mnbox p {
   margin: 0.8em 0;
 }
 
-.mnbox p:first-child { margin-top: 0; }
-.mnbox p:last-child  { margin-bottom: 0; }
+.mnbox p:first-child {
+  margin-top: 0;
+}
 
-/* =========================
-   Divider
-========================= */
+.mnbox p:last-child {
+  margin-bottom: 0;
+}
+
+/* 会話変更ライン（見やすさ微調整） */
 .mn-divider {
   text-align: center;
-  margin: 0.4em 0;
-  color: #ffd36a;
-  font-size: 1.1em;
+  margin: 1.2em 0 1.1em;
+  color: #ffd36a;        /* 少しだけ濃い蜂蜜色 */
+  font-size: 1.1em;     /* ほんのり大きく */
   letter-spacing: 0.18em;
-  line-height: 1.2;
+  opacity: 0.95;        /* ほんの少しだけ濃く */
+  line-height: 1.2; /* ← 下の空きを殺す */
 }
 
 .mn-divider::before {
   content: "⎔••┈┈┈┈•• ⎔ ••┈┈┈┈••⎔";
+  display: inline-block;
+  text-shadow:
+    0 1px 2px rgba(255, 215, 120, 0.35),
+    0 3px 8px rgba(255, 215, 120, 0.45);
 }
 
-p + .mn-divider { margin-bottom: 0; }
-.mn-divider + p { margin-top: 0; }
+p + .mn-divider {
+  margin-bottom: 0;
+}
 
-/* =========================
-   Now Playing
+.mn-divider + p {
+  margin-top: 0;
+}
+
+.mn-divider {
+  margin: 0.4em 0;
+}
+
+/* ==========================
+   なうぷれ：中央固定・ぴょん強化版
 ========================= */
+
 .nupr {
   position: relative;
+  width: 100%;
   text-align: center;
-  margin: 0.4em 0 0;
+  margin: 0;
   padding: 0.3em 0 0.65em;
   font-size: 11px;
   line-height: 1.2;
-  font-family: 'Allura', 'Niramit', sans-serif;
+  letter-spacing: 0.02em;
+  font-family: 'Allura', 'Niramit', 'Microsoft YaHei', メイリオ, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
+/* アンダーライン */
+.nupr::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 0;
+  height: 6px;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 226, 138, 0.55),
+      rgba(255, 226, 138, 0.3) 45%,
+      rgba(255, 226, 138, 0.12) 65%,
+      rgba(255, 226, 138, 0)
+    );
+}
+
+/* 跳ねる文字 */
 .nupr-text {
-  display: inline-block;
   font-family: 'Niramit', 'M PLUS Rounded 1c', sans-serif;
   letter-spacing: 0.16em;
+  display: inline-block;
   color: #64C8F0;
   animation: nupr-bounce 1.9s cubic-bezier(.34,1.56,.64,1) infinite;
 }
 
+/* ちゃんと分かる「ぴょん」 */
 @keyframes nupr-bounce {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(-6px); }
-  38%  { transform: translateY(0); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-6px); /* ← 高さUP */
+  }
+  38% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0); /* ← ここで待つ */
+  }
 }
+
+.nupr {
+  margin-top: 0.4em;
+}
+
+p + .nupr {
+  margin-top: 0.2em;
+}
+
+.mn-divider + .nupr {
+  margin-top: 0.3em;
+}
+
+/* ───────────────
+   ナイショバナシ
+──────────────── */
+
+.secret {
+  margin: 1.5em 0;
+}
+
+/* フタ（summary） */
+.secret summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #64C8F0;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(100, 200, 240, 0.12)
+    );
+  display: inline-block;
+  box-shadow:
+    0 2px 4px rgba(100, 200, 240, 0.15);
+}
+
+/* ▶︎マーク消す（Safari対応） */
+.secret summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 開いたとき */
+.secret[open] summary {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 245, 210, 0.9),
+      rgba(255, 215, 130, 0.55)
+    );
+  color: #8a6b00;
+  box-shadow:
+    0 4px 8px rgba(255, 200, 100, 0.35);
+}
+
+/* 中身 */
+.secret p {
+  position: relative;
+  margin: 0.7em 0 0;
+  padding: 1em 1.2em;
+  background: #ffffff;
+  border-radius: 14px 14px 20px 20px;
+  font-size: 0.9em;
+  line-height: 1.9;
+  box-shadow:
+    0 6px 14px rgba(255, 200, 100, 0.18);
+}
+
+/* =========================
+   リスト用ボックス
+========================= */
+.listbox {
+  max-width: 680px;
+  margin: 2.2em auto;
+  padding: 1.6em 1.9em;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  /* 枠は“存在するかしないか”レベル */
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  /* 蜂蜜だけの影 */
+  box-shadow:
+    0 8px 22px rgba(255, 226, 138, 0.28),
+    0 14px 36px rgba(255, 226, 138, 0.16);
+
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #555;
+
+  white-space: pre-line;
+}
+
+/* =========================
+   セクションラベル（蜂蜜統一）
+========================= */
+.list-head {
+  margin: 1.4em 0 0.5em;
+}
+
+.list-head b {
+  display: inline-block;
+  padding: 0.25em 0.9em;
+  border-radius: 999px;
+
+  /* 白＋蜂蜜のうっすら膜 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 226, 138, 0.22)
+  );
+
+  color: #666;              /* 文字はグレー固定 */
+  font-size: 0.82em;
+  font-weight: normal;
+  letter-spacing: 0.07em;
+
+  box-shadow: none;         /* 影は使わない */
+}
+
+/* ラベル前の記号だけ蜂蜜色 */
+.list-head b::before {
+  content: "⬣";
+  margin-right: 0.4em;
+  color: rgba(255, 226, 138, 0.9);
+  font-size: 0.95em;
+}
+
+/* =========================
+   リスト本文
+========================= */
+.listbox p {
+  margin: 0;
+}
+
+/* + で始まる行を少し整える */
+.listbox {
+  white-space: pre-line;
+}
+
+/* ===== 余白リセット（listbox専用） ===== */
+.listbox {
+  line-height: 1.8;
+}
+
+.listbox p {
+  margin: 0.2em 0;
+}
+
+.listbox b {
+  display: inline-block;
+}
+
+.listbox br {
+  display: none;
+}
+
