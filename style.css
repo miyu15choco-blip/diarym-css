@@ -521,21 +521,23 @@ p + .nupr {
   margin: 1.2em 0 0.4em;
 }
 
-/* 開閉サイン：⬢ */
-.log-fold summary::after {
-  content: " ⬢";
-  font-size: 0.75em;
-  color: rgba(180, 180, 180, 0.7);
+/* ラベル左側に ⬢（開閉サイン） */
+.log-fold summary b {
+  display: inline-flex;
+  align-items: center;
 }
 
-/* open時 */
-.log-fold[open] summary::after {
-  content: " ⬡";
-  color: rgba(180, 180, 180, 0.5);
+/* 閉じているとき */
+.log-fold summary b::before {
+  content: "⬢";
+  margin-right: 0.4em;
+  color: #64C8F0;
+  font-size: 0.9em;
 }
 
-/* 中身は静かに出るだけ */
-.log-fold p {
-  margin-top: 0.4em;
+/* 開いているとき */
+.log-fold[open] summary b::before {
+  content: "⬡";
+  color: #64C8F0;
 }
 
