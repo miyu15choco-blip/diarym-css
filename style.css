@@ -521,14 +521,15 @@ p + .nupr {
   margin: 1.2em 0 0.4em;
 }
 
-/* 開閉サインは最小限 */
-.log-fold summary b::after {
+/* 開閉サイン：⬢ */
+.log-fold summary::after {
   content: " ⬢";
   font-size: 0.75em;
   color: rgba(180, 180, 180, 0.7);
 }
 
-.log-fold[open] summary b::after {
+/* open時 */
+.log-fold[open] summary::after {
   content: " ⬡";
   color: rgba(180, 180, 180, 0.5);
 }
