@@ -500,3 +500,40 @@ p + .nupr {
   display: none;
 }
 
+/* =========================
+   Viewing History 用 折りたたみ
+========================= */
+.log-fold {
+  margin-top: 0.6em;
+}
+
+/* summary は「ただの見出し」 */
+.log-fold summary {
+  list-style: none;
+  cursor: pointer;
+}
+.log-fold summary::-webkit-details-marker {
+  display: none;
+}
+
+/* list-head の見た目はそのまま使う */
+.log-fold summary .list-head {
+  margin: 1.2em 0 0.4em;
+}
+
+/* 開閉サインは最小限 */
+.log-fold summary b::after {
+  content: " ▾";
+  font-size: 0.7em;
+  color: rgba(180, 180, 180, 0.8);
+}
+
+.log-fold[open] summary b::after {
+  content: " ▴";
+}
+
+/* 中身は静かに出るだけ */
+.log-fold p {
+  margin-top: 0.4em;
+}
+
