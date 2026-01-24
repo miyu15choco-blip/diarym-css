@@ -523,13 +523,14 @@ p + .nupr {
 
 /* 開閉サインは最小限 */
 .log-fold summary b::after {
-  content: " ▾";
-  font-size: 0.7em;
-  color: rgba(180, 180, 180, 0.8);
+  content: " ⬢";
+  font-size: 0.75em;
+  color: rgba(180, 180, 180, 0.7);
 }
 
 .log-fold[open] summary b::after {
-  content: " ▴";
+  content: " ⬡";
+  color: rgba(180, 180, 180, 0.5);
 }
 
 /* 中身は静かに出るだけ */
